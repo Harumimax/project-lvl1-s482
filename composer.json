@@ -1,0 +1,12 @@
+{
+    "name": "harumimax/brain-game",
+    "description": "Mini brain-game",
+    "type": "project",
+    "authors": [
+        {
+            "name": "harumimax",
+            "email": "harumimax@gmail.com"
+        }
+    ],
+    "require": {}
+}

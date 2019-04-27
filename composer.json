@@ -8,7 +8,7 @@
             "email": "harumimax@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {},
     "bin": [
         "bin/brain-games"

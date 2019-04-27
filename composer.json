@@ -2,6 +2,7 @@
     "name": "harumimax/brain-game",
     "description": "Mini brain-game",
     "type": "project",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "harumimax",

@@ -8,6 +8,6 @@ codeclimate.com:
 2. Test Coverage Badge
 <a href="https://codeclimate.com/github/Harumimax/project-lvl1-s482/test_coverage"><img src="https://api.codeclimate.com/v1/badges/16166c33bdf18273c411/test_coverage" /></a>
 travis:
-https://travis-ci.org/Harumimax/project-lvl1-s482.svg?branch=master
+[![Build Status](https://travis-ci.org/Harumimax/project-lvl1-s482.svg?branch=1.2.0)](https://travis-ci.org/Harumimax/project-lvl1-s482)
 
 step 4:

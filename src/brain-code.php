@@ -23,7 +23,7 @@ function checkAnswer($number, $answer)
     return $plaerAnswer;
 }
 
-function correctAnswerCalc($a, $b, $numberOfOperation) 
+function correctAnswerCalc($a, $b, $numberOfOperation)
 {
     global $operation;
     if ($numberOfOperation === 1) {

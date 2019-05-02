@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace BrainGames\Cli;
 
@@ -17,7 +17,7 @@ do {
 
     \cli\line("\nQuestion: {$operation}");
     $answer = \cli\prompt("Your answer");
-    $answer = (integer)$answer;
+    $answer = (int)$answer;
     $plaerAnswer = checkAnswerCalc($correctAnswer, $answer);
 
     if ($plaerAnswer) {
@@ -28,7 +28,6 @@ do {
         \cli\line("Let's try again, %s!", $name);
         break;
     }
-
 } while ($rightAnswer < 3);
 
 if ($rightAnswer === 3) {

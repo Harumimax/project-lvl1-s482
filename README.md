@@ -10,6 +10,4 @@ codeclimate.com:
 travis:
 [![Build Status](https://travis-ci.org/Harumimax/project-lvl1-s482.svg?branch=1.2.0)](https://travis-ci.org/Harumimax/project-lvl1-s482)
 
-step 4:
-
-step 5:
+step 4 & step 5: https://asciinema.org/a/HWfdDunOH7dmyoDOClxFdu6Gv

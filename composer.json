@@ -24,7 +24,9 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/brain-code.php"
+            "src/brain-code.php",
+            "games/even.php",
+            "games/calc.php"
         ],
         "psr-4": {
             "BrainGames\\Cli\\": "src"

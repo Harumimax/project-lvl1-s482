@@ -11,3 +11,5 @@ travis:
 [![Build Status](https://travis-ci.org/Harumimax/project-lvl1-s482.svg?branch=1.2.0)](https://travis-ci.org/Harumimax/project-lvl1-s482)
 
 step 4 & step 5: https://asciinema.org/a/HWfdDunOH7dmyoDOClxFdu6Gv
+
+step 6: https://asciinema.org/a/h50avzKLB4fJi1Iv6Xp8n9Bwy

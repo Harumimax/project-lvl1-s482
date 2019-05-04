@@ -13,3 +13,5 @@ travis:
 step 4 & step 5: https://asciinema.org/a/HWfdDunOH7dmyoDOClxFdu6Gv
 
 step 6: https://asciinema.org/a/h50avzKLB4fJi1Iv6Xp8n9Bwy
+
+step 7: https://asciinema.org/a/XrXfhbnxlfo6OG5evfSTYY8U6

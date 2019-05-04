@@ -2,7 +2,7 @@
 
 namespace BrainGames\Cli;
 
-function correctAnswer($number)
+function correctAnswerEven($number)
 {
     if ($number % 2 === 0) {
         $correctAnswer = "yes";
@@ -12,9 +12,8 @@ function correctAnswer($number)
     return $correctAnswer;
 }
 
-function checkAnswer($number, $answer)
+function checkAnswer($correctAnswer, $answer)
 {
-    $correctAnswer = correctAnswer($number);
     if ($answer === $correctAnswer) {
         $plaerAnswer = true;
     } else {
@@ -39,12 +38,19 @@ function correctAnswerCalc($a, $b, $numberOfOperation)
     return $correctAnswerCalc;
 }
 
-function checkAnswerCalc($correctAnswer, $answer)
+function correctAnswerGcd($a, $b)
 {
-    if ($answer === $correctAnswer) {
-        $plaerAnswer = true;
+    if ($a > $b) {
+        $min = $b;
     } else {
-        $plaerAnswer = false;
+        $min = $a;
     }
-    return $plaerAnswer;
+
+    $correctAnswerGcd = 1;
+    for ($i = 1; $i <= $min; $i++) {
+        if ( ($a % $i === 0) && ($b % $i === 0) ) {
+            $correctAnswerGcd = $i;
+        }
+    }
+    return $correctAnswerGcd;
 }

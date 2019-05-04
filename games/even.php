@@ -10,9 +10,10 @@ $name = \cli\prompt("\nMay I have your name?");
 $rightAnswer = 0;
 do {
     $number = rand(1, 100);
-    $correctAnswer = correctAnswer($number);
+    $correctAnswer = correctAnswerEven($number);
+    
     $answer = \cli\prompt("\nQuestion: {$number}");
-    $plaerAnswer = checkAnswer($number, $answer);
+    $plaerAnswer = checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {
         \cli\line('Correct!');

@@ -14,11 +14,11 @@ do {
     $numberOfOperation = rand(1, 3);
 
     $correctAnswer = correctAnswerCalc($a, $b, $numberOfOperation);
-
+    
     \cli\line("\nQuestion: {$operation}");
     $answer = \cli\prompt("Your answer");
     $answer = (int)$answer;
-    $plaerAnswer = checkAnswerCalc($correctAnswer, $answer);
+    $plaerAnswer = checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {
         \cli\line('Correct!');

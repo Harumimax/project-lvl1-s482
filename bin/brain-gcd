@@ -4,4 +4,4 @@
 
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    require_once __DIR__ . '/../games/even.php';
+    require_once __DIR__ . '/../games/gcd.php';

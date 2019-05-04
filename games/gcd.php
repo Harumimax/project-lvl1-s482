@@ -3,22 +3,21 @@
 namespace BrainGames\Cli;
 
 \cli\line('Welcome to the Brain Game!');
-\cli\line('What is the result of the expression?');
+\cli\line('Find the greatest common divisor of given numbers.');
 $name = \cli\prompt("\nMay I have your name?");
 \cli\line("Hello, %s!", $name);
 
 $rightAnswer = 0;
 do {
-    $a = rand(1, 10);
-    $b = rand(1, 10);
-    $numberOfOperation = rand(1, 3);
+    $a = rand(1, 100);
+    $b = rand(1, 100);
 
-    $correctAnswer = correctAnswerCalc($a, $b, $numberOfOperation);
-
-    \cli\line("\nQuestion: {$operation}");
+    $correctAnswer = correctAnswerGcd($a, $b);
+    
+    \cli\line("\nQuestion: {$a} and {$b}");
     $answer = \cli\prompt("Your answer");
     $answer = (int)$answer;
-    $plaerAnswer = checkAnswerCalc($correctAnswer, $answer);
+    $plaerAnswer = checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {
         \cli\line('Correct!');

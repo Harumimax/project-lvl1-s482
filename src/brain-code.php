@@ -54,3 +54,25 @@ function correctAnswerGcd($a, $b)
     }
     return $correctAnswerGcd;
 }
+
+function correctAnswerProgression()
+{
+    $start = rand(1, 100);
+    $step = rand(1, 9);
+    $num = rand(2, 9);
+    $arr = [];
+    global $operation;
+
+    $arr[0] = $start;
+    for ($i = 1; $i < 10; $i++) {
+        $arr[$i] = $arr[$i - 1] + $step;
+    }
+    $correctAnswerProgression = $arr[$num];
+    $arr[$num] = "...";
+    $operation = "";
+    foreach ($arr as $item) {
+        $operation = "{$operation} {$item}";
+    }
+
+    return $correctAnswerProgression;
+}

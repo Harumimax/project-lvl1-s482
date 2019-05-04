@@ -3,17 +3,17 @@
 namespace BrainGames\Cli;
 
 \cli\line('Welcome to the Brain Game!');
-\cli\line('Find the greatest common divisor of given numbers.');
+\cli\line('Answer "yes" if given number is prime. Otherwise answer "no".');
 $name = \cli\prompt("\nMay I have your name?");
 \cli\line("Hello, %s!", $name);
 
 $rightAnswer = 0;
 do {
-    $correctAnswer = correctAnswerGcd();
+    $correctAnswer = correctAnswerPrime();
     
     \cli\line("\nQuestion: {$operation}");
     $answer = \cli\prompt("Your answer");
-    $answer = (int)$answer;
+
     $plaerAnswer = checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {

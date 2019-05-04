@@ -9,10 +9,9 @@ $name = \cli\prompt("\nMay I have your name?");
 
 $rightAnswer = 0;
 do {
-    $number = rand(1, 100);
-    $correctAnswer = correctAnswerEven($number);
+    $correctAnswer = correctAnswerEven();
     
-    $answer = \cli\prompt("\nQuestion: {$number}");
+    $answer = \cli\prompt("\nQuestion: {$operation}");
     $plaerAnswer = checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {

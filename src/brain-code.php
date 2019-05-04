@@ -2,8 +2,12 @@
 
 namespace BrainGames\Cli;
 
-function correctAnswerEven($number)
+function correctAnswerEven()
 {
+    global $operation;
+    $number = rand(1, 100);
+    $operation = $number;
+
     if ($number % 2 === 0) {
         $correctAnswer = "yes";
     } else {
@@ -22,37 +26,48 @@ function checkAnswer($correctAnswer, $answer)
     return $plaerAnswer;
 }
 
-function correctAnswerCalc($a, $b, $numberOfOperation)
+function correctAnswerCalc()
 {
     global $operation;
+
+    $a = rand(1, 10);
+    $b = rand(1, 10);
+    $numberOfOperation = rand(1, 3);
+
     if ($numberOfOperation === 1) {
-        $correctAnswerCalc = $a + $b;
+        $correctAnswer = $a + $b;
         $operation = "{$a} + {$b}";
     } elseif ($numberOfOperation === 2) {
-        $correctAnswerCalc = $a - $b;
+        $correctAnswer = $a - $b;
         $operation = "{$a} - {$b}";
     } else {
-        $correctAnswerCalc = $a * $b;
+        $correctAnswer = $a * $b;
         $operation = "{$a} * {$b}";
     }
-    return $correctAnswerCalc;
+    return $correctAnswer;
 }
 
-function correctAnswerGcd($a, $b)
+function correctAnswerGcd()
 {
+    global $operation;
+
+    $a = rand(1, 100);
+    $b = rand(1, 100);
+    $operation = "{$a} and {$b}";
+
     if ($a > $b) {
         $min = $b;
     } else {
         $min = $a;
     }
 
-    $correctAnswerGcd = 1;
+    $correctAnswer = 1;
     for ($i = 1; $i <= $min; $i++) {
         if (($a % $i === 0) && ($b % $i === 0)) {
-            $correctAnswerGcd = $i;
+            $correctAnswer = $i;
         }
     }
-    return $correctAnswerGcd;
+    return $correctAnswer;
 }
 
 function correctAnswerProgression()
@@ -67,12 +82,28 @@ function correctAnswerProgression()
     for ($i = 1; $i < 10; $i++) {
         $arr[$i] = $arr[$i - 1] + $step;
     }
-    $correctAnswerProgression = $arr[$num];
+    $correctAnswer = $arr[$num];
     $arr[$num] = "...";
     $operation = "";
     foreach ($arr as $item) {
         $operation = "{$operation} {$item}";
     }
 
-    return $correctAnswerProgression;
+    return $correctAnswer;
+}
+
+function correctAnswerPrime()
+{
+    global $operation;
+    $operation = rand(1, 113);
+    $correctAnswer = "yes";
+
+    for ($i = 2; $i < $operation; $i++) {
+        if ($operation % $i === 0) {
+            $correctAnswer = "no";
+            return $correctAnswer;
+        }
+    }
+
+    return $correctAnswer;
 }

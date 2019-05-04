@@ -9,11 +9,7 @@ $name = \cli\prompt("\nMay I have your name?");
 
 $rightAnswer = 0;
 do {
-    $a = rand(1, 10);
-    $b = rand(1, 10);
-    $numberOfOperation = rand(1, 3);
-
-    $correctAnswer = correctAnswerCalc($a, $b, $numberOfOperation);
+    $correctAnswer = correctAnswerCalc();
     
     \cli\line("\nQuestion: {$operation}");
     $answer = \cli\prompt("Your answer");

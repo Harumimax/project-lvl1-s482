@@ -48,7 +48,7 @@ function correctAnswerGcd($a, $b)
 
     $correctAnswerGcd = 1;
     for ($i = 1; $i <= $min; $i++) {
-        if ( ($a % $i === 0) && ($b % $i === 0) ) {
+        if (($a % $i === 0) && ($b % $i === 0)) {
             $correctAnswerGcd = $i;
         }
     }

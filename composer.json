@@ -2,7 +2,6 @@
     "name": "harumimax/brain-game",
     "description": "Mini brain-game",
     "type": "project",
-    "version": "1.3.0",
     "authors": [
         {
             "name": "harumimax",
@@ -25,10 +24,7 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/brain-code.php",
-            "games/even.php",
-            "games/calc.php",
-            "games/gcd.php"
+            "src/brain-code.php"
         ],
         "psr-4": {
             "BrainGames\\Cli\\": "src"

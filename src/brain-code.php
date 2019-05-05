@@ -51,19 +51,19 @@ function correctAnswerGcd()
 {
     global $operation;
 
-    $a = rand(1, 100);
-    $b = rand(1, 100);
-    $operation = "{$a} and {$b}";
+    $number1 = rand(1, 100);
+    $number2 = rand(1, 100);
+    $operation = "{$number1} and {$number2}";
 
-    if ($a > $b) {
-        $min = $b;
+    if ($number1 > $number2) {
+        $min = $number2;
     } else {
-        $min = $a;
+        $min = $number1;
     }
 
     $correctAnswer = 1;
     for ($i = 1; $i <= $min; $i++) {
-        if (($a % $i === 0) && ($b % $i === 0)) {
+        if (($number1 % $i === 0) && ($number2 % $i === 0)) {
             $correctAnswer = $i;
         }
     }

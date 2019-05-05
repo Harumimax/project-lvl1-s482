@@ -3,6 +3,7 @@
 namespace BrainGames\games;
 
 \BrainGames\src\run();
+
 \cli\line("\nWhat is the result of the expression?");
 
 $rightAnswer = 0;

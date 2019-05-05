@@ -1,7 +1,9 @@
 <?php
 
 namespace BrainGames\games;
+
 \BrainGames\src\run();
+
 \cli\line("\nWhat number is missing in the progression?");
 
 $rightAnswer = 0;

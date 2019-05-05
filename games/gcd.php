@@ -2,10 +2,9 @@
 
 namespace BrainGames\Cli;
 
-\cli\line('Welcome to the Brain Game!');
-\cli\line('Find the greatest common divisor of given numbers.');
-$name = \cli\prompt("\nMay I have your name?");
-\cli\line("Hello, %s!", $name);
+\BrainGames\Cli\run();
+
+\cli\line("\nFind the greatest common divisor of given numbers.");
 
 $rightAnswer = 0;
 do {

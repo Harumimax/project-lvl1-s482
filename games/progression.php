@@ -2,10 +2,9 @@
 
 namespace BrainGames\Cli;
 
-\cli\line('Welcome to the Brain Game!');
-\cli\line('What number is missing in the progression?');
-$name = \cli\prompt("\nMay I have your name?");
-\cli\line("Hello, %s!", $name);
+\BrainGames\Cli\run();
+
+\cli\line("\nWhat number is missing in the progression?");
 
 $rightAnswer = 0;
 do {

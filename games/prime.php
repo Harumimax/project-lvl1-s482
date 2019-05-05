@@ -1,19 +1,19 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace BrainGames\games;
 
-\BrainGames\Cli\run();
+\BrainGames\src\run();
 
 \cli\line("\nAnswer 'yes' if given number is prime. Otherwise answer 'no'.");
 
 $rightAnswer = 0;
 do {
-    $correctAnswer = correctAnswerPrime();
+    $correctAnswer = \BrainGames\src\correctAnswerPrime();
     
     \cli\line("\nQuestion: {$operation}");
     $answer = \cli\prompt("Your answer");
 
-    $plaerAnswer = checkAnswer($correctAnswer, $answer);
+    $plaerAnswer = \BrainGames\src\checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {
         \cli\line('Correct!');

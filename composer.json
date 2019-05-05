@@ -29,7 +29,7 @@
             "src/brain-code.php"
         ],
         "psr-4": {
-            "BrainGames\\Cli\\": "src"
+            "BrainGames\\src\\": "src"
         }
     },
     "require-dev": {

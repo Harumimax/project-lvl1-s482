@@ -1,19 +1,19 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace BrainGames\games;
 
-\BrainGames\Cli\run();
+\BrainGames\src\run();
 
 \cli\line("\nFind the greatest common divisor of given numbers.");
 
 $rightAnswer = 0;
 do {
-    $correctAnswer = correctAnswerGcd();
+    $correctAnswer = \BrainGames\src\correctAnswerGcd();
     
     \cli\line("\nQuestion: {$operation}");
     $answer = \cli\prompt("Your answer");
     $answer = (int)$answer;
-    $plaerAnswer = checkAnswer($correctAnswer, $answer);
+    $plaerAnswer = \BrainGames\src\checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {
         \cli\line('Correct!');

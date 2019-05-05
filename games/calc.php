@@ -1,19 +1,18 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace BrainGames\games;
 
-\BrainGames\Cli\run();
-
+\BrainGames\src\run();
 \cli\line("\nWhat is the result of the expression?");
 
 $rightAnswer = 0;
 do {
-    $correctAnswer = correctAnswerCalc();
+    $correctAnswer = \BrainGames\src\correctAnswerCalc();
     
     \cli\line("\nQuestion: {$operation}");
     $answer = \cli\prompt("Your answer");
     $answer = (int)$answer;
-    $plaerAnswer = checkAnswer($correctAnswer, $answer);
+    $plaerAnswer = \BrainGames\src\checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {
         \cli\line('Correct!');

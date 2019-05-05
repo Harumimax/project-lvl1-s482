@@ -1,19 +1,17 @@
 <?php
 
-namespace BrainGames\Cli;
-
-\BrainGames\Cli\run();
-
+namespace BrainGames\games;
+\BrainGames\src\run();
 \cli\line("\nWhat number is missing in the progression?");
 
 $rightAnswer = 0;
 do {
-    $correctAnswer = correctAnswerProgression();
+    $correctAnswer = \BrainGames\src\correctAnswerProgression();
     
     \cli\line("\nQuestion: {$operation}");
     $answer = \cli\prompt("Your answer");
     $answer = (int)$answer;
-    $plaerAnswer = checkAnswer($correctAnswer, $answer);
+    $plaerAnswer = \BrainGames\src\checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {
         \cli\line('Correct!');

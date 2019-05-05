@@ -1,17 +1,17 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace BrainGames\games;
 
-\BrainGames\Cli\run();
+\BrainGames\src\run();
 
 \cli\line("\nAnswer 'yes' if number even otherwise answer 'no'.");
 
 $rightAnswer = 0;
 do {
-    $correctAnswer = correctAnswerEven();
+    $correctAnswer = \BrainGames\src\correctAnswerEven();
     
     $answer = \cli\prompt("\nQuestion: {$operation}");
-    $plaerAnswer = checkAnswer($correctAnswer, $answer);
+    $plaerAnswer = \BrainGames\src\checkAnswer($correctAnswer, $answer);
 
     if ($plaerAnswer) {
         \cli\line('Correct!');

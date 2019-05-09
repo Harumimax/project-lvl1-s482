@@ -3,4 +3,6 @@
 
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    require_once __DIR__ . '/../games/gcd.php';
+    $name = \BrainGames\src\run("Find the greatest common divisor of given numbers.");
+
+    \BrainGames\src\play(3, $name);

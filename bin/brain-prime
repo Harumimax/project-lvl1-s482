@@ -3,4 +3,6 @@
  
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    require_once __DIR__ . '/../games/prime.php';
+    $name = \BrainGames\src\run("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+
+    \BrainGames\src\play(5, $name);

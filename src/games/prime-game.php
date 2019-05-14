@@ -4,15 +4,17 @@ namespace BrainGames\src\games;
 
 function isPrime($number)
 {
-    $correctAnswer = "yes";
-
-    for ($i = 2; $i <= round($number / 2); $i++) {
-        if ($number % $i === 0) {
-            $correctAnswer = "no";
-            return $correctAnswer;
-        }
+    if ($number < 2) {
+        return false;
     }
 
+    for ($i = 2; $i <= $number / 2; $i++) {
+        if ($number % $i === 0) {
+            $correctAnswer = false;
+            return false;
+        }
+    }
+    $correctAnswer = true;
     return $correctAnswer;
 }
 
@@ -23,8 +25,12 @@ function primeGame()
     $gameFunction = function () {
         $operation = rand(1, 113);
 
-        $correctAnswer = isPrime($operation);
-
+        if (isPrime($operation)) {
+            $correctAnswer = "yes";
+        } else {
+            $correctAnswer = "no";
+        }
+        
         $result = ['answer' => $correctAnswer, 'operation' => $operation];
         return $result;
     };

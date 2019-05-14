@@ -9,7 +9,7 @@ function calcGame()
     $gameFunction = function () {
         $a = rand(1, 10);
         $b = rand(1, 10);
-        $typeOfOperation = [1 => '+', 2 => '-', 3 =>'*'];
+        $typeOfOperation = [1 => '+', 2 => '-', 3 => '*'];
         $numberOfOperation = array_rand($typeOfOperation);
 
         if ($numberOfOperation === 0) {
@@ -27,5 +27,5 @@ function calcGame()
         return $result;
     };
     
-   \BrainGames\src\play\timeToPlay($gameFunction, $typeOfGame);
+    \BrainGames\src\play\timeToPlay($gameFunction, $typeOfGame);
 }

@@ -14,7 +14,6 @@ function timeToPlay($gameFunction, $typeOfGame)
 
     $targetWinGame = 3;
     for ($rightAnswer = 0; $rightAnswer < $targetWinGame; $rightAnswer++) {
-
         ['answer' => $correctAnswer, 'operation' => $operation] = $gameFunction();
 
         line("\nQuestion: {$operation}");

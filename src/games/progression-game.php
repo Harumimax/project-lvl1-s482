@@ -27,5 +27,5 @@ function progressionGame()
         return $result;
     };
     
-   \BrainGames\src\play\timeToPlay($gameFunction, $typeOfGame);
+    \BrainGames\src\play\timeToPlay($gameFunction, $typeOfGame);
 }

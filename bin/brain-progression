@@ -3,6 +3,4 @@
 
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    $name = \BrainGames\src\run("What number is missing in the progression?");
-
-    \BrainGames\src\play(2, $name);
+    \BrainGames\src\games\progressionGame();

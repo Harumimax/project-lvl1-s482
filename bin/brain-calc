@@ -3,6 +3,4 @@
 
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    $name = \BrainGames\src\run("What is the result of the expression?");
-
-    \BrainGames\src\play(1, $name);
+    \BrainGames\src\games\calcGame();

@@ -2,7 +2,5 @@
 <?php
  
     require_once __DIR__ . '/../vendor/autoload.php';
-
-    $name = \BrainGames\src\run("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-
-    \BrainGames\src\play(5, $name);
+    
+    \BrainGames\src\games\primeGame();

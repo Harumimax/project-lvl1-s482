@@ -3,6 +3,4 @@
   
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    $name = \BrainGames\src\run("Answer 'yes' if number even otherwise answer 'no'.");
-
-    \BrainGames\src\play(4, $name);
+    \BrainGames\src\games\evenGame();

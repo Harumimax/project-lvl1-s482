@@ -1,41 +1,35 @@
 <?php
 
-namespace BrainGames\src;
+namespace BrainGames\src\play;
 
-function play($numberOfGame, $name)
+use function cli\line;
+use function cli\prompt;
+
+function timeToPlay($gameFunction, $typeOfGame)
 {
+    line('Welcome to the Brain Game!');
+    line("{$typeOfGame}");
+    $name = prompt("\nMay I have your name?");
+    line("Hello, %s!", $name);
+
     $targetWinGame = 3;
     for ($rightAnswer = 0; $rightAnswer < $targetWinGame; $rightAnswer++) {
-        if ($numberOfGame === 1) {
-            $play = \BrainGames\src\games\correctAnswerCalc();
-        } elseif ($numberOfGame === 2) {
-            $play = \BrainGames\src\games\correctAnswerProgression();
-        } elseif ($numberOfGame === 3) {
-            $play = \BrainGames\src\games\correctAnswerGcd();
-        } elseif ($numberOfGame === 4) {
-            $play = \BrainGames\src\games\correctAnswerEven();
-        } elseif ($numberOfGame === 5) {
-            $play = \BrainGames\src\games\correctAnswerPrime();
-        }
-        
-        $correctAnswer = $play['answer'];
-        $operation = $play['operation'];
 
-        \cli\line("\nQuestion: {$operation}");
-        $answer = \cli\prompt("Your answer");
+        ['answer' => $correctAnswer, 'operation' => $operation] = $gameFunction();
 
-        $plaerAnswer = \BrainGames\src\checkAnswer($correctAnswer, $answer, $numberOfGame);
+        line("\nQuestion: {$operation}");
+        $answer = prompt("Your answer");
 
-        if ($plaerAnswer) {
-            \cli\line('Correct!');
+        if ($answer === $correctAnswer) {
+            line('Correct!');
         } else {
-            \cli\line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
-            \cli\line("Let's try again, %s!", $name);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
+            line("Let's try again, %s!", $name);
             break;
         }
     }
 
     if ($rightAnswer === $targetWinGame) {
-        \cli\line("\nCongratulations, %s!", $name);
+        line("\nCongratulations, %s!", $name);
     }
 }

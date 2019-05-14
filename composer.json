@@ -1,6 +1,11 @@
 {
     "name": "harumimax/brain-game",
-    "description": "Mini brain-game",
+    "description": "Mini brain-games",
+    "keywords":[
+        "hexlet",
+        "first project",
+        "brain-games"
+    ],
     "type": "project",
     "authors": [
         {
@@ -25,14 +30,12 @@
     ],
     "autoload": {
         "files": [
-            "src/Cli.php",
-            "src/checkAnswer.php",
             "src/play.php",
-            "src/games/correctAnswerCalc.php",
-            "src/games/correctAnswerGcd.php",
-            "src/games/correctAnswerEven.php",
-            "src/games/correctAnswerPrime.php",
-            "src/games/correctAnswerProgression.php"
+            "src/games/even-game.php",
+            "src/games/gcd-game.php",
+            "src/games/prime-game.php",
+            "src/games/progression-game.php",
+            "src/games/calc-game.php"
         ],
         "psr-4": {
             "BrainGames\\src\\": "src",

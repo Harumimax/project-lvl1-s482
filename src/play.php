@@ -7,10 +7,10 @@ use function cli\prompt;
 
 const ROUNDS = 3;
 
-function gameEngine($getGameFunction, $typeOfGame)
+function gameEngine($getGameFunction, $descriptionOfGame)
 {
     line('Welcome to the Brain Game!');
-    line("{$typeOfGame}");
+    line("{$descriptionOfGame}");
     $name = prompt("\nMay I have your name?");
     line("Hello, %s!", $name);
 

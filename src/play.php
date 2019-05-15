@@ -1,11 +1,13 @@
 <?php
 
-namespace BrainGames\src\play;
+namespace BrainGames\play;
 
 use function cli\line;
 use function cli\prompt;
 
-function timeToPlay($gameFunction, $typeOfGame)
+const ROUNDS = 3;
+
+function gameEngine($getGameFunction, $typeOfGame)
 {
     line('Welcome to the Brain Game!');
     line("{$typeOfGame}");
@@ -13,8 +15,8 @@ function timeToPlay($gameFunction, $typeOfGame)
     line("Hello, %s!", $name);
 
     $targetWinGame = 3;
-    for ($rightAnswer = 0; $rightAnswer < $targetWinGame; $rightAnswer++) {
-        ['answer' => $correctAnswer, 'operation' => $operation] = $gameFunction();
+    for ($i = 0; $i < ROUNDS; $i++) {
+        [$correctAnswer, $operation] = $getGameFunction();
 
         line("\nQuestion: {$operation}");
         $answer = prompt("Your answer");
@@ -28,7 +30,7 @@ function timeToPlay($gameFunction, $typeOfGame)
         }
     }
 
-    if ($rightAnswer === $targetWinGame) {
+    if ($i === $targetWinGame) {
         line("\nCongratulations, %s!", $name);
     }
 }

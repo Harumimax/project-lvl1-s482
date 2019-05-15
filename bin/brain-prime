@@ -1,6 +1,9 @@
 #!/usr/bin/env php
+
 <?php
  
-    require_once __DIR__ . '/../vendor/autoload.php';
+use function BrainGames\games\prime\primeGame;
+
+require_once __DIR__ . '/../vendor/autoload.php';
     
-    \BrainGames\src\games\primeGame();
+primeGame();

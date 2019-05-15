@@ -1,31 +1,37 @@
 <?php
 
-namespace BrainGames\src\games;
+namespace BrainGames\games\calc;
+
+use function BrainGames\play\gameEngine;
+
+const DESCRIPTION = "What is the result of the expression?";
 
 function calcGame()
 {
-    $typeOfGame = "What is the result of the expression?";
-
-    $gameFunction = function () {
+    $getGameFunction = function () {
         $a = rand(1, 10);
         $b = rand(1, 10);
-        $typeOfOperation = [1 => '+', 2 => '-', 3 => '*'];
+        $typeOfOperation = ['+', '-', '*'];
         $numberOfOperation = array_rand($typeOfOperation);
 
-        if ($numberOfOperation === 0) {
-            $correctAnswer = $a + $b;
-            $operation = "{$a} + {$b}";
-        } elseif ($numberOfOperation === 1) {
-            $correctAnswer = $a - $b;
-            $operation = "{$a} - {$b}";
-        } else {
-            $correctAnswer = $a * $b;
-            $operation = "{$a} * {$b}";
+        switch ($numberOfOperation) {
+            case 0:
+                $correctAnswer = $a + $b;
+                $operation = "{$a} + {$b}";
+                break;
+            case 1:
+                $correctAnswer = $a - $b;
+                $operation = "{$a} - {$b}";
+                break;
+            case 2:
+                $correctAnswer = $a * $b;
+                $operation = "{$a} * {$b}";
+                break;
         }
+
         $correctAnswer = (string)$correctAnswer;
-        $result = ['answer' => $correctAnswer, 'operation' => $operation];
-        return $result;
+        return [$correctAnswer, $operation];
     };
     
-    \BrainGames\src\play\timeToPlay($gameFunction, $typeOfGame);
+    gameEngine($getGameFunction, DESCRIPTION);
 }

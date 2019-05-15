@@ -1,31 +1,30 @@
 <?php
 
-namespace BrainGames\src\games;
+namespace BrainGames\games\progression;
+
+use function BrainGames\play\gameEngine;
+
+const DESCRIPTION = "What number is missing in the progression?";
 
 function progressionGame()
 {
-    $typeOfGame = "What number is missing in the progression?";
-
-    $gameFunction = function () {
+    $getGameFunction = function () {
         $start = rand(1, 100);
         $step = rand(1, 9);
-        $num = rand(2, 8);
-        $arr = [];
-    
-        $showNumbersOfProgression = 10;
-        for ($i = 0; $i < $showNumbersOfProgression; $i++) {
-            $arr[$i] = $start + $step * $i;
+        $lengthOfProgression = 10;
+        $hiddenStep = rand(2, $lengthOfProgression - 2);
+        $progression = [];
+        
+        for ($i = 0; $i < $lengthOfProgression; $i++) {
+            $progression[$i] = $start + $step * $i;
         }
-        $correctAnswer = $arr[$num];
-        $arr[$num] = "...";
-        $operation = "";
-        foreach ($arr as $item) {
-            $operation = "{$operation} {$item}";
-        }
-        $correctAnswer = (string)$correctAnswer;
-        $result = ['answer' => $correctAnswer, 'operation' => $operation];
-        return $result;
+        $correctAnswer = (string)$progression[$hiddenStep];
+        $progression[$hiddenStep] = "...";
+
+        $operation = implode(' ', $progression);
+
+        return [$correctAnswer, $operation];
     };
     
-    \BrainGames\src\play\timeToPlay($gameFunction, $typeOfGame);
+    gameEngine($getGameFunction, DESCRIPTION);
 }

@@ -1,6 +1,9 @@
 #!/usr/bin/env php
+
 <?php
 
-    require_once __DIR__ . '/../vendor/autoload.php';
+use function BrainGames\games\progression\progressionGame;
 
-    \BrainGames\src\games\progressionGame();
+require_once __DIR__ . '/../vendor/autoload.php';
+
+progressionGame();

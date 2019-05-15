@@ -1,14 +1,14 @@
 <?php
 
-namespace BrainGames\src\games;
+namespace BrainGames\games\gcd;
 
-function isGcd($number1, $number2)
+use function BrainGames\play\gameEngine;
+
+const DESCRIPTION = "Find the greatest common divisor of given numbers.";
+
+function findGcd($number1, $number2)
 {
-    if ($number1 > $number2) {
-        $min = $number2;
-    } else {
-        $min = $number1;
-    }
+    $min = ($number1 > $number2) ? $number2 : $number1;
 
     $correctAnswer = 1;
     for ($i = 1; $i <= $min; $i++) {
@@ -22,18 +22,14 @@ function isGcd($number1, $number2)
 
 function gcdGame()
 {
-    $typeOfGame = "Find the greatest common divisor of given numbers.";
-
-    $gameFunction = function () {
+    $getGameFunction = function () {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $operation = "{$number1} and {$number2}";
 
-        $correctAnswer = isGcd($number1, $number2);
-        $correctAnswer = (string)$correctAnswer;
-        $result = ['answer' => $correctAnswer, 'operation' => $operation];
-        return $result;
+        $correctAnswer = (string)findGcd($number1, $number2);
+        return [$correctAnswer, $operation];
     };
     
-    \BrainGames\src\play\timeToPlay($gameFunction, $typeOfGame);
+    gameEngine($getGameFunction, DESCRIPTION);
 }

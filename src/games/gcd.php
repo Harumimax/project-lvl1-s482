@@ -2,13 +2,13 @@
 
 namespace BrainGames\games\gcd;
 
-use function BrainGames\play\gameEngine;
+use function BrainGames\play\starGame;
 
 const DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
 function findGcd($number1, $number2)
 {
-    $min = ($number1 > $number2) ? $number2 : $number1;
+    $min = min($number1, $number2);
 
     $correctAnswer = 1;
     for ($i = 1; $i <= $min; $i++) {
@@ -22,7 +22,7 @@ function findGcd($number1, $number2)
 
 function gcdGame()
 {
-    $getGameFunction = function () {
+    $getGameData = function () {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $operation = "{$number1} and {$number2}";
@@ -31,5 +31,5 @@ function gcdGame()
         return [$correctAnswer, $operation];
     };
     
-    gameEngine($getGameFunction, DESCRIPTION);
+    starGame($getGameData, DESCRIPTION);
 }

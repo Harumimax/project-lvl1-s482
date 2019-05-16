@@ -5,18 +5,17 @@ namespace BrainGames\play;
 use function cli\line;
 use function cli\prompt;
 
-const ROUNDS = 3;
+const ROUND = 3;
 
-function gameEngine($getGameFunction, $descriptionOfGame)
+function starGame($getGameData, $description)
 {
     line('Welcome to the Brain Game!');
-    line("{$descriptionOfGame}");
+    line("{$description}");
     $name = prompt("\nMay I have your name?");
     line("Hello, %s!", $name);
 
-    $targetWinGame = 3;
-    for ($i = 0; $i < ROUNDS; $i++) {
-        [$correctAnswer, $operation] = $getGameFunction();
+    for ($i = 0; $i < ROUND; $i++) {
+        [$correctAnswer, $operation] = $getGameData();
 
         line("\nQuestion: {$operation}");
         $answer = prompt("Your answer");
@@ -30,7 +29,7 @@ function gameEngine($getGameFunction, $descriptionOfGame)
         }
     }
 
-    if ($i === $targetWinGame) {
+    if ($i === ROUND) {
         line("\nCongratulations, %s!", $name);
     }
 }

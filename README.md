@@ -1,19 +1,18 @@
-step 1: https://asciinema.org/a/78MI3C60qimSpETouMo8OEWB6
+Brain-Games by harumimax (harumimax/brain-game)
+Collection of mini-games, only here and now, without prepayment and deception!
+#hexlet #first_project #brain-games
 
-step 3:
+<a href="https://codeclimate.com/github/Harumimax/project-lvl1-s482/maintainability"><img src="https://api.codeclimate.com/v1/badges/16166c33bdf18273c411/maintainability" /></a> [![Build Status](https://travis-ci.org/Harumimax/project-lvl1-s482.svg?branch=1.2.0)](https://travis-ci.org/Harumimax/project-lvl1-s482)
 
-codeclimate.com: 
-1. Maintainability Badge
-<a href="https://codeclimate.com/github/Harumimax/project-lvl1-s482/maintainability"><img src="https://api.codeclimate.com/v1/badges/16166c33bdf18273c411/maintainability" /></a>
-2. Test Coverage Badge
-<a href="https://codeclimate.com/github/Harumimax/project-lvl1-s482/test_coverage"><img src="https://api.codeclimate.com/v1/badges/16166c33bdf18273c411/test_coverage" /></a>
-travis:
-[![Build Status](https://travis-ci.org/Harumimax/project-lvl1-s482.svg?branch=1.2.0)](https://travis-ci.org/Harumimax/project-lvl1-s482)
+for installation use this easy command:
+composer global require harumimax/brain-game
 
-step 4 & step 5: https://asciinema.org/a/HWfdDunOH7dmyoDOClxFdu6Gv
+Even Game: https://asciinema.org/a/HWfdDunOH7dmyoDOClxFdu6Gv
 
-step 6: https://asciinema.org/a/h50avzKLB4fJi1Iv6Xp8n9Bwy
+Calc Game: https://asciinema.org/a/HWfdDunOH7dmyoDOClxFdu6Gv
 
-step 7: https://asciinema.org/a/XrXfhbnxlfo6OG5evfSTYY8U6
+GCD Game: https://asciinema.org/a/h50avzKLB4fJi1Iv6Xp8n9Bwy
 
-step 8: https://asciinema.org/a/m4LHkQKO7ODL7qMYljSIqPuyx
+Progression Game: https://asciinema.org/a/XrXfhbnxlfo6OG5evfSTYY8U6
+
+Prime Game: https://asciinema.org/a/m4LHkQKO7ODL7qMYljSIqPuyx

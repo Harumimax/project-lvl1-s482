@@ -25,10 +25,10 @@ function gcdGame()
     $getGameData = function () {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
-        $operation = "{$number1} and {$number2}";
-
+        $question = "{$number1} and {$number2}";
         $correctAnswer = (string)findGcd($number1, $number2);
-        return [$correctAnswer, $operation];
+        
+        return [$correctAnswer, $question];
     };
     
     starGame($getGameData, DESCRIPTION);

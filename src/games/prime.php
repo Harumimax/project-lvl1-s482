@@ -17,17 +17,16 @@ function isPrime($number)
             return false;
         }
     }
-    $correctAnswer = true;
-    return $correctAnswer;
+
+    return true;
 }
 
 function primeGame()
 {
     $getGameData = function () {
         $question = rand(1, 113);
-
         $correctAnswer = (isPrime($question)) ? "yes" : "no";
-        
+
         return [$correctAnswer, $question];
     };
     

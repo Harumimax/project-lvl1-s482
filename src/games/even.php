@@ -15,9 +15,8 @@ function evenGame()
 {
     $getGameData = function () {
         $question = rand(1, 100);
-
         $correctAnswer = (isEven($question)) ? "yes" : "no";
-    
+        
         return [$correctAnswer, $question];
     };
     

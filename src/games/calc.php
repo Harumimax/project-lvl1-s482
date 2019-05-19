@@ -6,6 +6,22 @@ use function BrainGames\play\starGame;
 
 const DESCRIPTION = "What is the result of the expression?";
 
+// ====================== вариант 3 ==================================
+function sum($a, $b)
+{
+    return $a + $b;
+}
+
+function minus($a, $b)
+{
+    return $a - $b;
+}
+
+function multiplication($a, $b)
+{
+    return $a * $b;
+}
+
 function calcGame()
 {
     $getGameData = function () {
@@ -36,34 +52,18 @@ function calcGame()
 //            } }
 //      $correctAnswer = getCorrectAnswer($a, $b, $selectedOperation);
 
-// ====================== вариант 3 ==================================
-        function sum($a, $b)
-        {
-            return $a + $b;
-        }
-
-        function minus($a, $b)
-        {
-            return $a - $b;
-        }
-
-        function multiplication($a, $b)
-        {
-            return $a * $b;
-        }
-
         switch ($selectedOperation) {
             case "+":
                 $correctAnswer = $a + $b;
                 break;
-                // return [sum($a, $b), $question];
+                // return [sum($a, $b), $question]; ===== для варианта 3
             case "-":
                 $correctAnswer = $a - $b;
-                // return [minus($a, $b), $question];
+                // return [minus($a, $b), $question]; ===== для варианта 3
             case "*":
                 $correctAnswer = $a * $b;
                 break;
-                // return [multiplication($a, $b), $question];
+                // return [multiplication($a, $b), $question]; ===== для варианта 3
         }
         
         $correctAnswer = (string)$correctAnswer;

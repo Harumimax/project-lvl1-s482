@@ -25,11 +25,9 @@ function starGame($getGameData, $description)
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
             line("Let's try again, %s!", $name);
-            break;
+            exit;
         }
     }
 
-    if ($i === ROUND) {
-        line("\nCongratulations, %s!", $name);
-    }
+    line("\nCongratulations, %s!", $name);
 }

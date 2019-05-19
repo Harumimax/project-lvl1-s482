@@ -18,7 +18,7 @@ function calcGame()
 // ====================== вариант 1 ==================================
 //      $arrayOfAnswer = ["+" => $a + $b, "-" => $a - $b, "*" => $a * $b];
 //      $correctAnswer = $arrayOfAnswer[$selectedOperation];
-//      можно ли такой вариант использовать?
+//      можно ли такой вариант использовать? он получается самым коротким же
 
 // ====================== вариант 2 ==================================
 //      function getCorrectAnswer ($a, $b, $selectedOperation)
@@ -36,16 +36,36 @@ function calcGame()
 //            } }
 //      $correctAnswer = getCorrectAnswer($a, $b, $selectedOperation);
 
+// ====================== вариант 3 ==================================
+function sum($a, $b) 
+{
+    return $a + $b;
+}
+
+function minus($a, $b)
+{
+    return $a - $b;
+}
+
+function multiplication($a, $b) 
+{
+    return $a * $b;
+}
+//      $arrayOfAnswer = ["+" => sum($a, $b), "-" => minus($a, $b), "*" => multiplication($a, $b)];
+//      $correctAnswer = $arrayOfAnswer[$selectedOperation];
+
         switch ($selectedOperation) {
             case "+":
                 $correctAnswer = $a + $b;
                 break;
+                // return [sum($a, $b), $question];
             case "-":
                $correctAnswer = $a - $b;
-                break;
+                // return [minus($a, $b), $question];
             case "*":
                 $correctAnswer = $a * $b;
                break;
+                // return [multiplication($a, $b), $question];
         }
         
         $correctAnswer = (string)$correctAnswer;

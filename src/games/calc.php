@@ -37,6 +37,7 @@ function calcGame()
 //      $correctAnswer = getCorrectAnswer($a, $b, $selectedOperation);
 
 // ====================== вариант 3 ==================================
+<<<<<<< HEAD
 function sum($a, $b) 
 {
     return $a + $b;
@@ -51,6 +52,22 @@ function multiplication($a, $b)
 {
     return $a * $b;
 }
+=======
+        function sum($a, $b)
+        {
+            return $a + $b;
+        }
+
+        function minus($a, $b)
+        {
+            return $a - $b;
+        }
+
+        function multiplication($a, $b)
+        {
+            return $a * $b;
+        }
+>>>>>>> temp_branch
 //      $arrayOfAnswer = ["+" => sum($a, $b), "-" => minus($a, $b), "*" => multiplication($a, $b)];
 //      $correctAnswer = $arrayOfAnswer[$selectedOperation];
 
@@ -60,11 +77,19 @@ function multiplication($a, $b)
                 break;
                 // return [sum($a, $b), $question];
             case "-":
+<<<<<<< HEAD
                $correctAnswer = $a - $b;
                 // return [minus($a, $b), $question];
             case "*":
                 $correctAnswer = $a * $b;
                break;
+=======
+                $correctAnswer = $a - $b;
+                // return [minus($a, $b), $question];
+            case "*":
+                $correctAnswer = $a * $b;
+                break;
+>>>>>>> temp_branch
                 // return [multiplication($a, $b), $question];
         }
         

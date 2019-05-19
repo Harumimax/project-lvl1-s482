@@ -19,4 +19,8 @@ Progression Game: https://asciinema.org/a/XrXfhbnxlfo6OG5evfSTYY8U6
 Prime Game: [![asciicast](https://asciinema.org/a/m4LHkQKO7ODL7qMYljSIqPuyx.svg)](https://asciinema.org/a/m4LHkQKO7ODL7qMYljSIqPuyx)
 =======
 Prime Game: [![asciicast](https://asciinema.org/a/m4LHkQKO7ODL7qMYljSIqPuyx.svg)](https://asciinema.org/a/m4LHkQKO7ODL7qMYljSIqPuyx)
+<<<<<<< HEAD
 >>>>>>> 0944a6db8ae96ffabcda32fc0eb147ecb985c3f1
+=======
+>>>>>>> add var3 for calc
+>>>>>>> temp_branch

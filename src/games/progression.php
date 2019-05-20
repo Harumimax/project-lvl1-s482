@@ -12,7 +12,7 @@ function progressionGame()
     $getGameData = function () {
         $start = rand(1, 100);
         $step = rand(1, 9);
-        $hiddenStep = rand(2, LENGTH_OF_PROGRESSION - 3);
+        $hiddenStep = rand(1, LENGTH_OF_PROGRESSION - 2);
         $progression = [];
         
         for ($i = 0; $i < LENGTH_OF_PROGRESSION; $i++) {

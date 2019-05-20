@@ -2,9 +2,9 @@
     "name": "harumimax/brain-game",
     "description": "Mini brain-games",
     "keywords": [
-      "hexlet",
-      "first project",
-      "brain-games"
+        "hexlet",
+        "first project",
+        "brain-games"
     ],
     "type": "project",
     "authors": [
@@ -14,31 +14,31 @@
       }
     ],
     "scripts": {
-      "phpcs": "phpcs",
-      "phpcbf": "phpcbf"
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf"
     },
     "require": {
-      "wp-cli/php-cli-tools": "^0.11.11"
-    },
-    "bin": [
-      "bin/brain-games",
-      "bin/brain-even",
-      "bin/brain-calc",
-      "bin/brain-gcd",
-      "bin/brain-progression",
-      "bin/brain-prime"
-    ],
-    "autoload": {
-      "files": [
-        "src/play.php",
-        "src/games/even.php",
-        "src/games/calc.php",
-        "src/games/progression.php",
-        "src/games/prime.php",
-        "src/games/gcd.php"
-      ]
+        "wp-cli/php-cli-tools": "^0.11.11"
     },
     "require-dev": {
-      "squizlabs/php_codesniffer": "^3.4"
+        "squizlabs/php_codesniffer": "^3.4"
+    },
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
+    ],
+    "autoload": {
+        "files": [
+            "src/play.php",
+            "src/games/even.php",
+            "src/games/calc.php",
+            "src/games/progression.php",
+            "src/games/prime.php",
+            "src/games/gcd.php"
+        ]
     }
 }

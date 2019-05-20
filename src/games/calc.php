@@ -5,67 +5,31 @@ namespace BrainGames\games\calc;
 use function BrainGames\play\starGame;
 
 const DESCRIPTION = "What is the result of the expression?";
-
-// ====================== вариант 3 ==================================
-function sum($a, $b)
-{
-    return $a + $b;
-}
-
-function minus($a, $b)
-{
-    return $a - $b;
-}
-
-function multiplication($a, $b)
-{
-    return $a * $b;
-}
+const OPERATIONS = ['+', '-', '*'];
 
 function calcGame()
 {
     $getGameData = function () {
         $a = rand(1, 10);
         $b = rand(1, 10);
-        $operations = ['+', '-', '*'];
-        $selectedOperation = $operations[array_rand($operations)];
-        $question = "{$a} {$selectedOperation} {$b}";
+        $selectedOperation = OPERATIONS[array_rand(OPERATIONS)];
+        $question = "$a $selectedOperation $b";
 
-// ====================== вариант 1 ==================================
-//      $arrayOfAnswer = ["+" => $a + $b, "-" => $a - $b, "*" => $a * $b];
-//      $correctAnswer = $arrayOfAnswer[$selectedOperation];
-//      можно ли такой вариант использовать? он получается самым коротким же
+        $getCorrectAnswer = function ($a, $b, $selectedOperation) {
+            switch ($selectedOperation) {
+                case "+":
+                    return $a + $b;
+                    break;
+                case "-":
+                    return $a - $b;
+                    break;
+                case "*":
+                    return $a * $b;
+                    break;
+            }
+        };
 
-// ====================== вариант 2 ==================================
-//      function getCorrectAnswer ($a, $b, $selectedOperation)
-//        {
-//            switch ($selectedOperation) {
-//                case "+":
-//                    return $a + $b;
-//                    break;
-//                case "-":
-//                    return $a - $b;
-//                    break;
-//                case "*":
-//                    return $a * $b;
-//                    break;
-//            } }
-//      $correctAnswer = getCorrectAnswer($a, $b, $selectedOperation);
-
-        switch ($selectedOperation) {
-            case "+":
-                $correctAnswer = $a + $b;
-                break;
-                // return [sum($a, $b), $question]; ===== для варианта 3
-            case "-":
-                $correctAnswer = $a - $b;
-                // return [minus($a, $b), $question]; ===== для варианта 3
-            case "*":
-                $correctAnswer = $a * $b;
-                break;
-                // return [multiplication($a, $b), $question]; ===== для варианта 3
-        }
-        
+        $correctAnswer = $getCorrectAnswer($a, $b, $selectedOperation);
         $correctAnswer = (string)$correctAnswer;
         return [$correctAnswer, $question];
     };

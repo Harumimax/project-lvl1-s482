@@ -5,7 +5,7 @@ namespace BrainGames\play;
 use function cli\line;
 use function cli\prompt;
 
-const ROUND = 3;
+const COUNT_ROUNDS = 3;
 
 function starGame($getGameData, $description)
 {
@@ -14,7 +14,7 @@ function starGame($getGameData, $description)
     $name = prompt("\nMay I have your name?");
     line("Hello, %s!", $name);
 
-    for ($i = 0; $i < ROUND; $i++) {
+    for ($i = 0; $i < COUNT_ROUNDS; $i++) {
         [$correctAnswer, $operation] = $getGameData();
 
         line("\nQuestion: {$operation}");

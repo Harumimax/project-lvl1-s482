@@ -12,11 +12,11 @@ function calcGame()
     $getGameData = function () {
         $a = rand(1, 10);
         $b = rand(1, 10);
-        $selectedOperation = OPERATIONS[array_rand(OPERATIONS)];
-        $question = "$a $selectedOperation $b";
+        $operation = OPERATIONS[array_rand(OPERATIONS)];
+        $question = "$a $operation $b";
 
-        $getCorrectAnswer = function ($a, $b, $selectedOperation) {
-            switch ($selectedOperation) {
+        $getCorrectAnswer = function ($a, $b, $operation) {
+            switch ($operation) {
                 case "+":
                     return $a + $b;
                     break;
@@ -29,7 +29,7 @@ function calcGame()
             }
         };
 
-        $correctAnswer = $getCorrectAnswer($a, $b, $selectedOperation);
+        $correctAnswer = $getCorrectAnswer($a, $b, $operation);
         $correctAnswer = (string)$correctAnswer;
         return [$correctAnswer, $question];
     };

@@ -10,14 +10,14 @@ function findGcd($number1, $number2)
 {
     $min = min($number1, $number2);
 
-    $correctAnswer = 1;
+    $result = 1;
     for ($i = 1; $i <= $min; $i++) {
         if (($number1 % $i === 0) && ($number2 % $i === 0)) {
-            $correctAnswer = $i;
+            $result = $i;
         }
     }
 
-    return $correctAnswer;
+    return $result;
 }
 
 function gcdGame()

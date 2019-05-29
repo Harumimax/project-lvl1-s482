@@ -2,6 +2,8 @@
 
 <?php
 
+use function BrainGames\menu\gameMenu;
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
-\BrainGames\run();
+gameMenu();

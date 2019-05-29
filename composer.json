@@ -34,6 +34,7 @@
     "autoload": {
         "files": [
             "src/play.php",
+            "src/menu.php",
             "src/games/even.php",
             "src/games/calc.php",
             "src/games/progression.php",
